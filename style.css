@@ -50,6 +50,30 @@ body {
   transform: scale(1.1);
 }
 
+.container .btn1 {
+  display: flex;
+  gap: 25px;
+}
+
+.btn1 a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
 #preloader {
   position: fixed;
   left: 0;
