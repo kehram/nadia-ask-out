@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pleeeeaaaseee???</title>
+
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
+            data-width="100%">
+            <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
+            <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1 id="typewriter1"></h1>
+        <h1 id="typewriter2"></h1>
+        <p>Date: 14.02.2025 | Place: Solista</p>
+
+        <div class="btn">
+            <a href="yes.html">Yes</a>
+            <a href="no1.html">No</a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            typeWriter("I think you stole my heart.", "typewriter1", function() {
+                typeWriter("Can I steal you for a lunch date? 🤗", "typewriter2");
+            });
+        });
+
+        function typeWriter(text, elementId, callback) {
+            let i = 0;
+            const speed = 100; // Speed of typing
+            function type() {
+                if (i < text.length) {
+                    document.getElementById(elementId).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (callback) {
+                    setTimeout(callback, 500); // Delay before starting the next typewriter effect
+                }
+            }
+            type();
+        }
+    </script>
+</body>
+
+</html>

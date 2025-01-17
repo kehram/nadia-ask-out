@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi Nadia Afrin Asha</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <div class="container">
+    <h1 id="typewriter"></h1>
+    <div class="btn">
+      <a href="home.html">Hi?</a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('preloader').style.display = 'none';
+        typeWriter();
+      }, 3000); // 3 seconds delay
+    });
+
+    function typeWriter() {
+      const text = "Hi Buttercup!";
+      let i = 0;
+      const speed = 100; // Speed of typing
+      function type() {
+        if (i < text.length) {
+          document.getElementById("typewriter").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+  </script>
+</body>
+
+</html>
