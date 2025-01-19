@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,6 +72,131 @@ h1 {
   h1 {
     font-size: 1.5em;
   }
+}
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top: 5px solid #ff69b4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#typewriter, #typewriter1, #typewriter2 {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffcccb, #ffb5da);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 90%;  /* Responsive width */
+  margin: 20px auto; /* Auto margins for centering */
+}
+
+.container .tenor-gif-embed {
+  max-width: 100%; /* Make gif responsive */
+  height: auto;
+}
+
+.container .btn, .container .btn1{
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  justify-content: center; /* Center buttons */
+  gap: 15px; /* Adjust gap */
+}
+
+.btn a, .btn1 a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 20px; /* Adjust padding */
+  border-radius: 8px;
+  box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn a:hover {
+  background-color: #ff69b4;
+  transform: scale(1.1);
+}
+
+
+
+h1 {
+  font-size: 2em;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7em;
+  }
+
+  .btn a, .btn1 a {
+    padding: 8px 15px; /* Smaller padding on small screens */
+    font-size: 0.9em; /* Smaller text on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 480px) {
+    h1{
+        font-size: 1.3em;
+    }
 }
 
 #preloader {
